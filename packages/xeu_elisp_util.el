@@ -266,14 +266,14 @@ See also: `get-image-dimensions'."
 
 
 (defun get-string-from-file (filePath)
-  "Return FILEPATH's content."
+  "Return filePath's content."
 ;; thanks to “Pascal J Bourguignon” and “TheFlyingDutchman <zzbba...@aol.com>”. 2010-09-02
   (with-temp-buffer
     (insert-file-contents filePath)
     (buffer-string)))
 
 (defun read-lines (filePath)
-  "Return a list of lines of a file at FILEPATH."
+  "Return a list of lines of a file at filePath."
   (with-temp-buffer
     (insert-file-contents filePath)
     (split-string (buffer-string) "\n" t)))
@@ -292,7 +292,7 @@ See also: `get-image-dimensions'."
 ;   (find-lisp-find-files ξdir regex-pattern)) )
 
 (defun delete-files-by-regex (ξdir regex-pattern)
-  "Delete files in a ξdir whose file name (not full path) matches a REGEX-PATTERN.
+  "Delete files in a ξdir whose file name (not full path) matches a regex-pattern.
  Example:
   (delete-files-by-regex \"~/web\" \"~$\") ; remove files ending in ~
 "
@@ -304,7 +304,7 @@ See also: `get-image-dimensions'."
    (find-lisp-find-files ξdir regex-pattern)) )
 
 (defun file-relative-name-emacs24.1.1-fix (ξfilePath ξdirPath)
-  "fix for `file-relative-name'. If path start with cap C: (Windows file path), it won't work.
+  "fix for `file-relative-name'. If path start with cap such as “C:” (Windows file path), it won't work.
 e.g.
  (file-relative-name \"c:/Users/h3/.emacs.d/test.el\" \"c:/Users/h3/.emacs.d/\" )
  (file-relative-name \"C:/Users/h3/.emacs.d/test.el\" \"C:/Users/h3/.emacs.d/\" ) ⇒ \"C:/Users/h3/.emacs.d/test.el\"
