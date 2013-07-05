@@ -29,7 +29,7 @@
 
 ;;; HISTORY
 
-;; version 1.6.8, 2013-07-05 • xah_file_util.el major update. more options added to “xah-find-text”, “xah-find-text-regex”, “xah-find-replace-text”. Output format improved. Much code refactoring.
+;; version 1.6.8, 2013-07-05 • More options added to “xah-find-text”, “xah-find-text-regex”, “xah-find-replace-text”. Output format improved. Much code refactoring.
 ;; version 1.6.7, 2013-06-17 • WARNING the argument for case search is reversed for xah-find-replace-text-regex. • added a case search option for xah-find-text-regex
 ;; version 1.6.6, 2012-12-16 Now, the backup file's suffix is same for all backup files created during one command call. Before, each backup file has timestamp when the backup file is created, that is, their seconds will differ.
 ;; version 1.6.5, 2012-12-08 improved the prompt for “xah-find-count” and also its output.
