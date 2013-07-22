@@ -45,7 +45,7 @@
 (defvar xah-html-mode-hook nil "Standard hook for `xah-html-mode'")
 
 (defcustom xhm-html5-tag-names nil
-  "alist of HTML5 tag names. The value is a vector of one element. w means word, l means line, b means block, others are unknown. They indicate the default ways to wrap the tag around cursor. "
+  "A alist of HTML5 tag names. For each element, the keys is tag names, value is a vector of one element, w means word, l means line, b means block, others are placeholder for unknown. The purpose of the value is to indicate the default way to wrap the tag around cursor. "
 ; todo: need to go the the list and look at the type carefully. Right now it's just quickly done. lots are “z”, for unkown. Also, some are self closing tags, current has mark of “n”.
 :group 'xah-html-mode
 )
@@ -99,8 +99,7 @@
 ("h5" . ["l"])
 ("h6" . ["l"])
 ("head" . ["b"])
-("header" . ["z"])
-("hgroup" . ["z"])
+("header" . ["b"])
 ("hr" . ["n"])
 ("html" . ["b"])
 ("i" . ["w"])
@@ -128,7 +127,7 @@
 ("output" . ["z"])
 ("p" . ["z"])
 ("param" . ["z"])
-("pre" . ["z"])
+("pre" . ["b"])
 ("progress" . ["z"])
 ("q" . ["z"])
 ("rp" . ["z"])
@@ -243,7 +242,7 @@
            ("bbcode" . ["xbbcode-mode" "bbcode"])
            ("c" . ["c-mode" "c"])
            ("cpp" . ["c++-mode" "cpp"])
-           ("cl" . ["lisp-mode" "lisp"])
+           ("common-lisp" . ["lisp-mode" "lisp"])
 
            ("org-mode" . ["org-mode" "org"])
 
@@ -274,7 +273,7 @@
            ("yasnippet" . ["snippet-mode" "yasnippet"])
            ("vbs" . ["visual-basic-mode" "vbs"])
            ("visualbasic" . ["visual-basic-mode" "vbs"])
-           ("mma" . ["fundamental-mode" "m"])
+           ("mathematica" . ["fundamental-mode" "m"])
 
            ("slim" . ["slim-mode" "slim"])
            ("yaml" . ["yaml-mode" "yaml"])
@@ -1662,7 +1661,7 @@ Case shouldn't matter, except when it's emacs's key notation.
                        ["insert" "<kbd>Insert</kbd>"]
                        ["ins" "<kbd>Insert</kbd>"]
                        ["pause" "<kbd>Pause</kbd>"]
-                       ["break" "<kbd>Break</kbd>"]
+                       ["PrtScn" "<kbd>PrtScn</kbd>"]
 
                        ["‹key›" "<kbd>‹key›</kbd>"]
                        ])
