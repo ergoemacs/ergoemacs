@@ -1,6 +1,6 @@
 ;;; xah-misc-commands.el --- xah's misc interactive commands that helps writing or coding. -*- coding: utf-8 -*-
 
-;; Copyright © 2012 by Xah Lee
+;; Copyright © 2013 by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.org/ )
 ;; Created: 2013-07-24

@@ -171,7 +171,7 @@
 (defcustom xhm-attribute-names nil
   "HTML5 attribute names."
 :group 'xah-html-mode)
-(setq xhm-attribute-names '( "id" "class" "style" "title" "href" "type" "rel" "http-equiv" "content" "charset" "alt" "src" "width" "height" "controls" "autoplay" "preload" "name" "value" "size" ))
+(setq xhm-attribute-names '( "id" "class" "style" "title" "href" "type" "rel" "http-equiv" "content" "charset" "alt" "src" "width" "height" "controls" "autoplay" "preload" "name" "value" "size" "async" "defer" ))
 
 (defcustom xhm-html5-self-close-tags nil
   "a list of HTML5 self-closing tag name. "
@@ -1190,7 +1190,7 @@ The order of lines for {title, author, date/time, url} needs not be in that orde
         (setq x (pop myList) )
         (cond
          ((string-match "^https?://" x ) (setq ξurl x))
-         ((string-match "^ *by " x ) (setq ξauthor x))
+         ((string-match "^ *[bB]y " x ) (setq ξauthor x))
          ((is-datetimestamp-p x) (setq ξdate x))
          (t (setq ξtitle x))
          )
@@ -1210,7 +1210,7 @@ The order of lines for {title, author, date/time, url} needs not be in that orde
 
     (setq ξauthor (trim-string ξauthor))
     (setq ξauthor (replace-regexp-in-string "\\. " " " ξauthor)) ; remove period in Initals
-    (setq ξauthor (replace-regexp-in-string "By +" "" ξauthor))
+    (setq ξauthor (replace-regexp-in-string "[Bb]y +" "" ξauthor))
     (setq ξauthor (upcase-initials (downcase ξauthor)))
 
     (setq ξdate (trim-string ξdate))
