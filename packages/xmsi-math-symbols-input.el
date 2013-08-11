@@ -55,6 +55,7 @@
 
 ;;; HISTORY
 
+;; v1.5.2, 2013-08-11 • added Chinese pinyin accent. ⁖ e2 → é, e3 → ě, è → è.
 ;; v1.5.1, 2013-04-09 • added ㎝ ㎠ ㎤. Why not?
 ;; v1.4.9, 2013-03-09 • added abbrev “tv” for 「📺」.
 ;; v1.4.8, 2013-03-01 • added abbrev “esc” for 「⎋」. • removed “power” for 「⎋」 because it's incorrect. there's no dedicate symbol in unicode for this. • added “sleep” for 「☾」 • added “break” for 「⎊」 • added “pause” for 「⎉」 • removed abbrev “control” for 「✲」, added abbrev “ctrl” for 「✲」. Because that symbol is associated with keyboard label only, not really “control”. • added the cycle 「✲ ⎈ ‸」 for control key symbol. • changed “enter” to insert 「⌤」 instead of 「↵」, because the new is more correct. • added abbrev “helm” for 「⎈」, may use for Control key. Microsoft keyboard uses 「✲」. • added cycles 「⏎ ↩ ↵ ⌤ ⎆」 • added a cycle for undo 「↶ ⎌」 (the latter is proper undo symbol, but there's no corresponding symbol for redo). • added “alt” for 「⎇」
@@ -115,7 +116,7 @@
 
 ;;; Code:
 
-(setq xmsi-version "v1.4.8")
+(setq xmsi-version "v1.5.2")
 
 (defvar xmsi-abrvs nil "A abbreviation hash table that maps a string to unicode char.")
 
@@ -543,6 +544,36 @@
   (puthash "A~" "Ã" xmsi-abrvs)
   (puthash "N~" "Ñ" xmsi-abrvs)
   (puthash "O~" "Õ" xmsi-abrvs)
+
+  (puthash "a4" "à" xmsi-abrvs)
+  (puthash "e4" "è" xmsi-abrvs)
+  (puthash "i4" "ì" xmsi-abrvs)
+  (puthash "o4" "ò" xmsi-abrvs)
+  (puthash "u4" "ù" xmsi-abrvs)
+  (puthash "A4" "À" xmsi-abrvs)
+  (puthash "E4" "È" xmsi-abrvs)
+  (puthash "I4" "Ì" xmsi-abrvs)
+  (puthash "O4" "Ò" xmsi-abrvs)
+  (puthash "U4" "Ù" xmsi-abrvs)
+
+  (puthash "a3" "ǎ" xmsi-abrvs)
+  (puthash "e3" "ě" xmsi-abrvs)
+  (puthash "i3" "ǐ" xmsi-abrvs)
+  (puthash "o3" "ǒ" xmsi-abrvs)
+  (puthash "u3" "ǔ" xmsi-abrvs)
+
+  (puthash "a2" "á" xmsi-abrvs)
+  (puthash "e2" "é" xmsi-abrvs)
+  (puthash "i2" "í" xmsi-abrvs)
+  (puthash "o2" "ó" xmsi-abrvs)
+  (puthash "u2" "ú" xmsi-abrvs)
+  (puthash "y2" "ý" xmsi-abrvs)
+  (puthash "A2" "Á" xmsi-abrvs)
+  (puthash "E2" "É" xmsi-abrvs)
+  (puthash "I2" "Í" xmsi-abrvs)
+  (puthash "O2" "Ó" xmsi-abrvs)
+  (puthash "U2" "Ú" xmsi-abrvs)
+  (puthash "Y2" "Ý" xmsi-abrvs)
 )
 
 (progn
