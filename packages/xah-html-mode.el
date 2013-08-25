@@ -1123,7 +1123,7 @@ WARNING: this function extract all text of the form 「<a … href=\"…\" …>�
           ) ) )
     urlList ))
 
-(defun xhm-update-title (newTitle)
+(defun xhm-update-title ( πnewTitle)
   "Update a HTML article's title and h1 tags.
 Update the <title>…</title> and <h1>…</h1> of current buffer."
   (interactive
@@ -1144,16 +1144,18 @@ Update the <title>…</title> and <h1>…</h1> of current buffer."
              (setq p2 (- (point) 1) )
              (delete-region p1 p2 )
              (goto-char p1)
-             (insert newTitle ) )
+             (insert πnewTitle ) )
 
-      (progn (search-forward "<h1>")
-             (setq p1 (point) )
-             (search-forward "<")
-             (setq p2 (- (point) 1) )
-             (delete-region p1 p2 )
-             (goto-char p1)
-             (insert newTitle ) )
-      ) ))
+      (if (search-forward "<h1>")
+          (progn 
+            (setq p1 (point) )
+            (search-forward "<")
+            (setq p2 (- (point) 1) )
+            (delete-region p1 p2 )
+            (goto-char p1)
+            (insert πnewTitle ) )
+        (progn
+          (message "<h1> tag not found. adding") ) ) ) ))
 
 (defun xhm-make-citation ()
   "Reformat current text block or selection into a canonical citation format.

@@ -27,7 +27,8 @@
 
 (defvar xem-elisp-lang-words nil "a list of elisp keyword more or less related to elisp the language.")
 (setq xem-elisp-lang-words '(
-
+"url-unhex-string"
+"decode-coding-string"
 "add-to-list"
 "and"
 "append"

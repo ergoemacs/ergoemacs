@@ -55,6 +55,7 @@
 
 ;;; HISTORY
 
+;; v1.5.4, 2013-08-21 • fixed a h→η
 ;; v1.5.3, 2013-08-15 • added Chinese pinyin for first tone ⁖ ā → ā, and also for all tones of ü, ⁖ {v1 → ǖ, v2 → ǘ, …}. Thanks to Lew Perin 〔 http://babelcarp.org/babelcarp/ 〕
 ;; v1.5.2, 2013-08-11 • added Chinese pinyin accent. ⁖ {a2 → á, a3 → ǎ, a4 → à}.
 ;; v1.5.1, 2013-04-09 • added ㎝ ㎠ ㎤. Why not?
@@ -877,7 +878,7 @@
   (puthash "D" "Δ" xmsi-abrvs)
   (puthash "E" "Ε" xmsi-abrvs)
   (puthash "Z" "Ζ" xmsi-abrvs)
-  (puthash "h" "Η" xmsi-abrvs)
+  (puthash "H" "Η" xmsi-abrvs)
   (puthash "Q" "Θ" xmsi-abrvs)
   (puthash "I" "Ι" xmsi-abrvs)
   (puthash "K" "Κ" xmsi-abrvs)
