@@ -125,7 +125,7 @@ With a negative prefix NUMBER, move backward to the previous NUMBER left bracket
   (interactive "p")
   (if (and number
            (> 0 number))
-      (ergoemacs-backward-open-braket (- 0 number))
+      (ergoemacs-backward-open-bracket (- 0 number))
     (forward-char 1)
     (search-forward-regexp
      (eval-when-compile
