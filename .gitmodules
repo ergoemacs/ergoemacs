@@ -1,0 +1,3 @@
+[submodule "ergoemacs/ergoemacs-keybindings"]
+	path = ergoemacs/ergoemacs-keybindings
+	url = git@github.com:ergoemacs/ergoemacs-mode.git
